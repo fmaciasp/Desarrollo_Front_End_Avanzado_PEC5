@@ -10,11 +10,20 @@ import { WinesService } from 'src/app/services/wines.service';
 export class ListComponent {
 
   wines: Wine[] = [];
+  showGrid: boolean = false;
 
   constructor(private winesService: WinesService) {}
 
   ngOnInit(): void {
     this.winesService.getAllWines().subscribe((wines) => this.wines = wines);
+  }
+
+  switchToTable() {
+    this.showGrid = false;
+  }
+
+  switchToCard() {
+    this.showGrid = true;
   }
 
 }
