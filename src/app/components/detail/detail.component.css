@@ -1,0 +1,5 @@
+.wine-description {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}

@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div *ngIf="wine" class="row animate__animated animate__bounce animate_fadeIn">
+        <div class="col-md-9">
+            <h3>{{wine.wine}}</h3>
+        </div>
+        <div class="col-md-8">
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Show all details
+                  </mat-panel-title>
+                  <mat-panel-description>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="wine-description">
+                    <div class="wine-text">
+                        <p><strong>ID:</strong> {{wine.id}}</p>
+                        <p><strong>Winery:</strong> {{wine.winery}}</p>
+                        <p><strong>Average:</strong> {{wine.rating.average}}</p>
+                        <p><strong>Reviews:</strong> {{wine.rating.reviews}}</p>
+                        <p><strong>Location:</strong> {{wine.location}}</p>
+                    </div>
+                    <div class="wine-picture">
+                        <img src="{{wine.image}}" alt="Vino {{wine.wine}}">
+                    </div>
+                </div>
+              </mat-expansion-panel>
+            
+        </div>
+        <div class="col-md-3">
+            <div class="mb-2">
+                <a class="btn btn-danger" routerLink="/">Back</a>
+            </div>
+        </div>
+    </div>
+</div>

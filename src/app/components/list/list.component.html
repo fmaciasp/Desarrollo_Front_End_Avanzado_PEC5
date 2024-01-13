@@ -1,0 +1,9 @@
+<div>
+    <h1>Red Wines</h1>
+    <ul class="list-group">
+        <a *ngFor="let wine of wines" [routerLink]="['/detail', wine.id]" class="list-group-item list-group-item-action animate__animated animate__bounce animate_fadeIn">
+            {{wine.id}} -- {{wine.wine}}
+        </a>
+
+    </ul>
+</div>
